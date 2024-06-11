@@ -1,11 +1,29 @@
 const mongoose = require('mongoose');
 
-const ConsultaSchema = new mongoose.Schema({
-  data: { type: Date, required: true },
-  horario: { type: String, required: true },
-  paciente_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Paciente', required: true },
-  medico_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Medico', required: true },
-  status: { type: String, enum: ['agendada', 'concluída', 'cancelada'], default: 'agendada' }
+const consultaSchema = new mongoose.Schema({
+    data: {
+        type: Date,
+        required: true
+    },
+    paciente: {
+        type: String,
+        required: true
+    },
+    medico: {
+        type: String,
+        required: true
+    },
+    descricao: {
+        type: String,
+        required: true
+    },
+    status: {
+        type: String,
+        enum: ['Agendada', 'Realizada', 'Cancelada'],
+        required: true
+    }
 });
 
-module.exports = mongoose.model('Consulta', ConsultaSchema);
+const Consulta = mongoose.model('Consulta', consultaSchema);
+
+module.exports = Consulta;

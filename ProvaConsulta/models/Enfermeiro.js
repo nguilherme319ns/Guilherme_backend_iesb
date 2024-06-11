@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
-const medicoSchema = new mongoose.Schema({
+const enfermeiroSchema = new mongoose.Schema({
     nome: {
         type: String,
         required: true
     },
-    especialidade: {
-        type: String,
+    idade: {
+        type: Number,
         required: true
     },
     salario: {
@@ -23,6 +23,6 @@ const medicoSchema = new mongoose.Schema({
     }
 });
 
-const Medico = mongoose.model('Medico', medicoSchema);
+const Enfermeiro = mongoose.model('Enfermeiro', enfermeiroSchema);
 
-module.exports = Medico;
+module.exports = Enfermeiro;
