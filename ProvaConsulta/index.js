@@ -12,7 +12,7 @@ app.use(autenticacaoRoutes)
 
 const { checkToken } = require('./validators/AutenticacaoValidator')
 
-const routes = require('./routes/routes')
+const routes = require('./routes/Routes')
 app.use(checkToken, routes)
 
 
