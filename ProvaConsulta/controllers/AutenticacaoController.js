@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 async function registrar(req, res) {
-    const { nome, email, senha } = req.body;
+    const { nome, email, senha, telefone, endereco } = req.body;
 
     const usuarioExistente = await Usuario.findOne({ email });
 
@@ -20,7 +20,9 @@ async function registrar(req, res) {
     const novoUsuario = new Usuario({
         nome,
         email,
-        senha: hash
+        senha: hash,
+        telefone,
+        endereco
     });
 
     await novoUsuario.save();
@@ -51,7 +53,7 @@ async function login(req, res) {
         },
         JWT_SECRET,
         {
-            expiresIn: '20m'
+            expiresIn: '120m'
         }
     );
 

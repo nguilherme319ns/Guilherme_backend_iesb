@@ -7,12 +7,9 @@ const medicoSchema = yup.object().shape({
     especialidade: yup
         .string('Especialidade precisa ser um texto')
         .required('Especialidade é obrigatória'),
-    crm: yup
-        .string('CRM precisa ser um texto')
-        .required('CRM é obrigatório'),
-    telefone: yup
-        .string('Telefone precisa ser um texto')
-        .required('Telefone é obrigatório')
+    cargo: yup
+        .string('cargo precisa ser um texto')
+        .required('cargo é obrigatório')
 });
 
 function validarMedico(req, res, next) {

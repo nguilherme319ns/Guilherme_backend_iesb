@@ -4,12 +4,13 @@ const enfermeiroSchema = yup.object().shape({
     nome: yup
         .string('Nome precisa ser um texto')
         .required('Nome é obrigatório'),
-    coren: yup
-        .string('COREN precisa ser um texto')
-        .required('COREN é obrigatório'),
-    telefone: yup
-        .string('Telefone precisa ser um texto')
-        .required('Telefone é obrigatório')
+    
+    idade: yup
+        .string('idade precisa ser um numero')
+        .required('idade obrigatório'),
+    cargo: yup
+        .string('Cargo precisa ser um texto')
+        .required('Cargo é obrigatório')
 });
 
 function validarEnfermeiro(req, res, next) {
