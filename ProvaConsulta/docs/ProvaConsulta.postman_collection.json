@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "5ac3bdd3-325a-4c01-83a7-437c1882f97d",
+		"name": "ProvaConsulta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33760276"
+	},
+	"item": [
+		{
+			"name": "Autenticacao",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Nguiherme319@gmail.com\",\r\n    \"senha\":\"123456789\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Guilherme\",\r\n    \"email\":\"Nguiherme319@gmail.com\",\r\n    \"senha\":\"123456789\",\r\n    \"telefone\":\"61983330675\",\r\n    \"endereco\":\"Borges Landeiro Garden\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "/medicos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Dr.carlos pinto\",\r\n    \"especialidade\":\"Cardiologista\",\r\n    \"salario\":\"30.000\",\r\n    \" dataContratacao\":\"2012\",\r\n    \"cargo\":\"Medico\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/medico",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/medicos/:id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/medico/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nome\":\"Dr.carlos pinto atualizado\",\r\n    \"especialidade\":\"Cardiologista\",\r\n    \"salario\":\"30.000\",\r\n    \" dataContratacao\":\"2012\",\r\n    \"cargo\":\"Medico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medicos/666a2eeb9b270ae635130550",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicos",
+								"666a2eeb9b270ae635130550"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/medico/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medicos/666a2eeb9b270ae635130550",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicos",
+								"666a2eeb9b270ae635130550"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enfermeiro",
+			"item": [
+				{
+					"name": "/enfermeiros",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Junior santos\",\r\n    \"idade\": 25,\r\n    \"salario\": 10000,\r\n    \"dataContratacao\": \"2019-01-02\",\r\n    \"cargo\":\"enfermeiro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/enfermeiros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"enfermeiros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/enfermeiro",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/enfermeiro/:id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/enfermeiro/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"nome\": \"Junior santos atualizado\",\r\n    \"idade\": 25,\r\n    \"salario\": 10000,\r\n    \"dataContratacao\": \"2019-01-02\",\r\n    \"cargo\":\"enfermeiro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/enfermeiros/666a32804454dfe6758ebe18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"enfermeiros",
+								"666a32804454dfe6758ebe18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/enfermeiro/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/enfermeiros/666a32804454dfe6758ebe18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"enfermeiros",
+								"666a32804454dfe6758ebe18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paciente",
+			"item": [
+				{
+					"name": "/pacientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Maria das Dores\",\r\n    \"idade\" :79,\r\n    \"genero\" :\"Feminino\",\r\n    \"telefone\": \"6197775674\",\r\n    \"endereco\" :\"Rua da agua \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/paciente",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/paciente/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Maria das Dores\",\r\n    \"idade\" :79,\r\n    \"genero\" :\"Feminino\",\r\n    \"telefone\": \"6197775674\",\r\n    \"endereco\" :\"Rua da agua \"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/pacientes/666a345c4454dfe6758ebe1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes",
+								"666a345c4454dfe6758ebe1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/paciente/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/pacientes/666a345c4454dfe6758ebe1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"pacientes",
+								"666a345c4454dfe6758ebe1c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consulta",
+			"item": [
+				{
+					"name": "/consultas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2024/09/01\" ,\r\n    \"paciente\": \"Maria das dores\",\r\n    \"medico\": \"Dr Carlos Pinto\",\r\n    \"descricao\":\"Sentindo varias doeres no peito\",\r\n    \"status\":\"Agendada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/consulta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/consulta/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Consultas/666cc6366831075e8a198d9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Consultas",
+								"666cc6366831075e8a198d9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/consulta/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": \"2024/09/01\" ,\r\n    \"paciente\": \"Maria das dores atualizada\",\r\n    \"medico\": \"Dr Carlos Pinto\",\r\n    \"descricao\":\"Sentindo varias doeres no peito\",\r\n    \"status\": \"Cancelada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/Consultas/666cc6366831075e8a198d9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Consultas",
+								"666cc6366831075e8a198d9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/consulta/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/Consultas/666cc6366831075e8a198d9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Consultas",
+								"666cc6366831075e8a198d9c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especialidade",
+			"item": [
+				{
+					"name": "/especialidades",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Dr.carlos\",\r\n    \"descricao\":\"Area do peito/costas\",\r\n    \"area\":\"Cardiologista\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/especialidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/especialidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/especialidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/especialidade/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Dr.carlos atualizado\",\r\n    \"descricao\":\"Area do peito/costas\",\r\n    \"area\":\"Cardiologista\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/especialidades/666ccba26420382c160132c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidades",
+								"666ccba26420382c160132c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/especialidade/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/especialidades/666ccba26420382c160132c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"especialidades",
+								"666ccba26420382c160132c0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NmEyOWFjZmU5ZmQ4ZDZmMzU0MTlhYSIsIm5vbWUiOiJHdWlsaGVybWUiLCJlbWFpbCI6Ik5ndWloZXJtZTMxOUBnbWFpbC5jb20iLCJpYXQiOjE3MTg0MDQzMDMsImV4cCI6MTcxODQxOTMwM30.V5nnKgpIrOmH1vhHm_EItBjPbFRR9Afmx8-fruQJ2FU",
+			"type": "string"
+		}
+	]
+}
